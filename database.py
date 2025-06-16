@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 # Database credentials
 MYSQL_HOST = os.getenv("MYSQL_HOST", "localhost")
 MYSQL_USER = os.getenv("MYSQL_USER", "root")
-MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "root")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "23MSM40002")
 MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "test_db")
 MYSQL_PORT = os.getenv("MYSQL_PORT", "3306")
 
@@ -54,3 +54,9 @@ def list_columns(database_name, table_name):
             return {"columns": [row[0] for row in result]}
     except Exception as e:
         return {"error": str(e)}
+
+
+#Run connection test
+#if __name__ == "__main__":
+#    test_connection()
+
